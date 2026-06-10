@@ -8,88 +8,91 @@
   <link rel="canonical" href="https://mastoholdings.com/about.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{'navy':'#0A1F44','dark-navy':'#051426','gold':'#D4AF37','light-gold':'#E8C547'},fontFamily:{serif:['"Playfair Display"','Georgia','serif']}}}}</script>
+  <script>tailwind.config={theme:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}</script>
 </head>
-<body class="font-sans bg-white text-gray-800 antialiased">
+<body class="font-sans bg-white text-neutral-900 antialiased">
 
-  <nav class="sticky top-0 z-50 bg-dark-navy shadow-xl">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <a href="/" class="flex flex-col leading-none"><span class="font-serif text-2xl font-bold text-white tracking-wider">MASTO</span><span class="text-gold text-xs font-semibold tracking-[0.2em] uppercase">HOLDINGS</span></a>
-        <div class="hidden lg:flex items-center space-x-8">
-          <a href="/" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">Home</a>
-          <a href="/about.html" class="text-gold font-medium text-sm uppercase tracking-wider">About</a>
-          <a href="/companies.html" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">Companies</a>
-          <a href="/leadership.html" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">Leadership</a>
-          <a href="/sustainability.html" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">Sustainability</a>
-          <a href="/news.html" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">News</a>
-          <a href="/careers.html" class="text-gray-300 hover:text-gold transition-colors text-sm uppercase tracking-wider">Careers</a>
-          <a href="/contact.html" class="bg-gold text-dark-navy px-5 py-2.5 rounded font-semibold text-sm uppercase tracking-wider hover:bg-light-gold transition-colors">Contact</a>
+  <nav class="sticky top-0 z-50 bg-white border-b border-neutral-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex flex-col leading-none">
+          <span class="text-base font-black tracking-widest">MASTO</span>
+          <span class="text-[9px] font-semibold tracking-[0.5em] text-neutral-400 uppercase">HOLDINGS</span>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="/" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">Home</a>
+          <a href="/about.html" class="text-[11px] uppercase tracking-widest font-semibold text-neutral-900 border-b border-neutral-900 pb-0.5">About</a>
+          <a href="/companies.html" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">Companies</a>
+          <a href="/leadership.html" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">Leadership</a>
+          <a href="/sustainability.html" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">Sustainability</a>
+          <a href="/news.html" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">News</a>
+          <a href="/careers.html" class="text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 transition-colors">Careers</a>
+          <a href="/contact.html" class="bg-neutral-900 text-white text-[11px] uppercase tracking-widest px-5 py-2.5 hover:bg-neutral-700 transition-colors">Contact</a>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu">
-          <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        <button id="mobile-menu-btn" class="lg:hidden p-2" aria-label="Toggle menu">
+          <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 pb-4">
-        <div class="flex flex-col space-y-1 pt-3">
-          <a href="/" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Home</a>
-          <a href="/about.html" class="text-gold px-4 py-2.5 text-sm uppercase tracking-wider">About</a>
-          <a href="/companies.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Companies</a>
-          <a href="/leadership.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Leadership</a>
-          <a href="/sustainability.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Sustainability</a>
-          <a href="/news.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">News</a>
-          <a href="/careers.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Careers</a>
-          <a href="/contact.html" class="text-gray-300 hover:text-gold px-4 py-2.5 text-sm uppercase tracking-wider">Contact</a>
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-neutral-200 pb-4">
+        <div class="flex flex-col">
+          <a href="/" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">Home</a>
+          <a href="/about.html" class="text-[11px] uppercase tracking-widest py-3 px-1 font-semibold text-neutral-900 border-b border-neutral-100">About</a>
+          <a href="/companies.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">Companies</a>
+          <a href="/leadership.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">Leadership</a>
+          <a href="/sustainability.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">Sustainability</a>
+          <a href="/news.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">News</a>
+          <a href="/careers.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500 border-b border-neutral-100">Careers</a>
+          <a href="/contact.html" class="text-[11px] uppercase tracking-widest py-3 px-1 text-neutral-500">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
   <!-- Page Header -->
-  <div class="bg-gradient-to-br from-dark-navy to-navy py-20 text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-center space-x-4 mb-4"><div class="w-8 h-0.5 bg-gold/50"></div><span class="text-gold text-sm font-semibold uppercase tracking-[0.3em]">Our Story</span><div class="w-8 h-0.5 bg-gold/50"></div></div>
-      <h1 class="font-serif text-5xl lg:text-6xl font-bold text-white mb-4">About Masto Holdings</h1>
-      <p class="text-white/70 text-xl">Building businesses that create lasting value for generations</p>
+  <section class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <p class="text-[11px] uppercase tracking-widest text-neutral-500 mb-3">Our Story</p>
+      <h1 class="text-5xl lg:text-6xl font-black text-white leading-tight">About Masto Holdings</h1>
+      <p class="text-neutral-400 text-lg mt-4 max-w-2xl">Building businesses that create lasting value for generations to come.</p>
     </div>
-  </div>
+  </section>
 
   <!-- Company Story -->
   <section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
         <div>
-          <div class="flex items-center space-x-4 mb-6"><div class="w-12 h-0.5 bg-gold"></div><span class="text-gold text-sm font-semibold uppercase tracking-[0.3em]">Our Foundation</span></div>
-          <h2 class="font-serif text-4xl font-bold text-navy mb-6 leading-tight">From Vision to Reality</h2>
-          <p class="text-gray-600 text-lg leading-relaxed mb-6">
+          <p class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">Our Foundation</p>
+          <h2 class="text-4xl font-bold text-neutral-900 mb-6 leading-tight">From Vision to Reality</h2>
+          <p class="text-neutral-500 text-lg leading-relaxed mb-5">
             Masto Holdings was born from a bold vision: to build a diversified portfolio of world-class businesses rooted in Nepal, reaching global markets. Founded in 2026, we set out to create a conglomerate that doesn't just pursue profit, but delivers genuine value to every stakeholder.
           </p>
-          <p class="text-gray-600 leading-relaxed mb-6">
+          <p class="text-neutral-500 leading-relaxed mb-5">
             Our founders saw an opportunity to harness Nepal's growing economy, strategic location, and talented workforce to build enterprises capable of competing on the global stage. From day one, sustainability and ethical business practices have been woven into our DNA.
           </p>
-          <p class="text-gray-600 leading-relaxed">
+          <p class="text-neutral-500 leading-relaxed">
             Today, Masto Holdings encompasses 8 portfolio companies across diverse sectors — from craft beverages to digital technology, from sports entertainment to real estate — each operating with excellence and a commitment to creating positive impact.
           </p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
-          <div class="bg-navy rounded-xl p-6 text-white">
-            <div class="font-serif text-4xl font-bold text-gold mb-2">8+</div>
-            <div class="text-white/70 text-sm">Portfolio Companies</div>
+        <div class="grid grid-cols-2 gap-px bg-neutral-200">
+          <div class="bg-neutral-900 text-white p-8">
+            <div class="text-4xl font-black mb-2">8+</div>
+            <div class="text-neutral-400 text-xs uppercase tracking-widest">Portfolio Companies</div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6">
-            <div class="font-serif text-4xl font-bold text-navy mb-2">8</div>
-            <div class="text-gray-500 text-sm">Industry Sectors</div>
+          <div class="bg-white p-8">
+            <div class="text-4xl font-black text-neutral-900 mb-2">8</div>
+            <div class="text-neutral-400 text-xs uppercase tracking-widest">Industry Sectors</div>
           </div>
-          <div class="bg-gray-50 rounded-xl p-6">
-            <div class="font-serif text-4xl font-bold text-navy mb-2">2026</div>
-            <div class="text-gray-500 text-sm">Year Founded</div>
+          <div class="bg-white p-8">
+            <div class="text-4xl font-black text-neutral-900 mb-2">2026</div>
+            <div class="text-neutral-400 text-xs uppercase tracking-widest">Year Founded</div>
           </div>
-          <div class="bg-gold rounded-xl p-6">
-            <div class="font-serif text-4xl font-bold text-dark-navy mb-2">NPL</div>
-            <div class="text-dark-navy/70 text-sm">Headquartered</div>
+          <div class="bg-neutral-100 p-8">
+            <div class="text-4xl font-black text-neutral-900 mb-2">NPL</div>
+            <div class="text-neutral-400 text-xs uppercase tracking-widest">Headquartered</div>
           </div>
         </div>
       </div>
@@ -97,24 +100,24 @@
   </section>
 
   <!-- Vision & Mission -->
-  <section class="py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="flex items-center justify-center space-x-4 mb-4"><div class="w-8 h-0.5 bg-gold"></div><span class="text-gold text-sm font-semibold uppercase tracking-[0.3em]">Direction</span><div class="w-8 h-0.5 bg-gold"></div></div>
-        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-navy">Vision & Mission</h2>
+  <section class="py-24 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[11px] uppercase tracking-widest text-neutral-400 mb-3">Direction</p>
+        <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900">Vision &amp; Mission</h2>
       </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-2xl p-10 shadow-md border-t-4 border-gold">
-          <div class="text-gold text-4xl mb-4">👁</div>
-          <h3 class="font-serif text-2xl font-bold text-navy mb-4">Our Vision</h3>
-          <p class="text-gray-600 leading-relaxed text-lg">
+      <div class="grid md:grid-cols-2 gap-px bg-neutral-200">
+        <div class="bg-white p-12">
+          <p class="text-[11px] uppercase tracking-widest text-neutral-400 mb-5">Our Vision</p>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-5">Where We Are Going</h3>
+          <p class="text-neutral-500 leading-relaxed text-lg">
             To become South Asia's most respected and admired holding company, recognized globally for building businesses that create exceptional value while making a meaningful positive impact on society and the environment.
           </p>
         </div>
-        <div class="bg-white rounded-2xl p-10 shadow-md border-t-4 border-navy">
-          <div class="text-navy text-4xl mb-4">🎯</div>
-          <h3 class="font-serif text-2xl font-bold text-navy mb-4">Our Mission</h3>
-          <p class="text-gray-600 leading-relaxed text-lg">
+        <div class="bg-neutral-900 text-white p-12">
+          <p class="text-[11px] uppercase tracking-widest text-neutral-500 mb-5">Our Mission</p>
+          <h3 class="text-2xl font-bold text-white mb-5">What Drives Us</h3>
+          <p class="text-neutral-400 leading-relaxed text-lg">
             To build a diversified portfolio of world-class businesses that create lasting value for stakeholders while driving economic development in Nepal and South Asia through innovation, sustainability, and operational excellence.
           </p>
         </div>
@@ -124,102 +127,126 @@
 
   <!-- Core Values -->
   <section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="flex items-center justify-center space-x-4 mb-4"><div class="w-8 h-0.5 bg-gold"></div><span class="text-gold text-sm font-semibold uppercase tracking-[0.3em]">What We Stand For</span><div class="w-8 h-0.5 bg-gold"></div></div>
-        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-navy">Core Values</h2>
-        <p class="text-gray-600 text-xl mt-4 max-w-2xl mx-auto">The principles that guide every decision we make</p>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[11px] uppercase tracking-widest text-neutral-400 mb-3">What We Stand For</p>
+        <h2 class="text-4xl lg:text-5xl font-bold text-neutral-900">Core Values</h2>
+        <p class="text-neutral-500 text-lg mt-4 max-w-xl mx-auto">The principles that guide every decision we make</p>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">⭐</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">Excellence</h3>
-          <p class="text-gray-600 leading-relaxed">We hold ourselves to the highest standards in everything we do — from investment decisions to operational management and stakeholder relationships.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200">
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">01</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Excellence</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">We hold ourselves to the highest standards in everything we do — from investment decisions to operational management and stakeholder relationships.</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">🤝</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">Integrity</h3>
-          <p class="text-gray-600 leading-relaxed">Transparency, honesty, and ethical conduct are non-negotiable at Masto Holdings. We build trust through consistent action and principled leadership.</p>
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">02</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Integrity</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Transparency, honesty, and ethical conduct are non-negotiable. We build trust through consistent action and principled leadership.</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">💡</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">Innovation</h3>
-          <p class="text-gray-600 leading-relaxed">We embrace change and constantly seek better ways to create value. Innovation is embedded in our culture and drives competitive advantage across our portfolio.</p>
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">03</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Innovation</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">We embrace change and constantly seek better ways to create value. Innovation is embedded in our culture and drives competitive advantage.</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">🌱</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">Sustainability</h3>
-          <p class="text-gray-600 leading-relaxed">ESG principles guide every investment and operational decision. We build businesses designed to thrive long-term while protecting people and planet.</p>
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">04</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Sustainability</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">ESG principles guide every investment and operational decision. We build businesses designed to thrive long-term while protecting people and planet.</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">👥</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">People First</h3>
-          <p class="text-gray-600 leading-relaxed">Our people are our greatest asset. We invest in talent, foster inclusive cultures, and create environments where exceptional individuals can reach their full potential.</p>
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">05</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">People First</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Our people are our greatest asset. We invest in talent, foster inclusive cultures, and create environments where exceptional individuals thrive.</p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-8 hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mb-4"><span class="text-gold text-xl">🌍</span></div>
-          <h3 class="font-serif text-xl font-bold text-navy mb-3">Impact</h3>
-          <p class="text-gray-600 leading-relaxed">We measure success not just in financial returns, but in the positive change we create for communities, employees, customers, and the world around us.</p>
+        <div class="bg-white p-8 hover:bg-neutral-50 transition-colors">
+          <div class="text-[11px] uppercase tracking-widest text-neutral-400 mb-4">06</div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-3">Impact</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">We measure success not just in financial returns, but in the positive change we create for communities, employees, customers, and the world.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-24 bg-navy">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="flex items-center justify-center space-x-4 mb-4"><div class="w-8 h-0.5 bg-gold/40"></div><span class="text-gold text-sm font-semibold uppercase tracking-[0.3em]">Our Advantage</span><div class="w-8 h-0.5 bg-gold/40"></div></div>
-        <h2 class="font-serif text-4xl lg:text-5xl font-bold text-white">Why Masto Holdings?</h2>
+  <!-- Why Masto Holdings -->
+  <section class="py-24 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-[11px] uppercase tracking-widest text-neutral-500 mb-3">Our Advantage</p>
+        <h2 class="text-4xl lg:text-5xl font-bold text-white">Why Masto Holdings?</h2>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="text-gold text-2xl">🏗</span></div>
-          <h3 class="font-serif text-lg font-bold text-white mb-3">Diversified Portfolio</h3>
-          <p class="text-white/60 text-sm leading-relaxed">Spread across 8 sectors to reduce risk and capture opportunities across different market cycles.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800">
+        <div class="bg-neutral-900 p-8 text-center">
+          <div class="text-3xl font-black text-white mb-3">8</div>
+          <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-widest">Diversified Portfolio</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Spread across 8 sectors to reduce risk and capture opportunities across different market cycles.</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="text-gold text-2xl">📈</span></div>
-          <h3 class="font-serif text-lg font-bold text-white mb-3">Long-Term Vision</h3>
-          <p class="text-white/60 text-sm leading-relaxed">We invest for decades, not quarters. Patient capital enables us to build truly transformative businesses.</p>
+        <div class="bg-neutral-900 p-8 text-center">
+          <div class="text-3xl font-black text-white mb-3">∞</div>
+          <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-widest">Long-Term Vision</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">We invest for decades, not quarters. Patient capital enables us to build truly transformative businesses.</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="text-gold text-2xl">🌐</span></div>
-          <h3 class="font-serif text-lg font-bold text-white mb-3">Regional Expertise</h3>
-          <p class="text-white/60 text-sm leading-relaxed">Deep understanding of South Asian markets combined with global best practices and networks.</p>
+        <div class="bg-neutral-900 p-8 text-center">
+          <div class="text-3xl font-black text-white mb-3">SA</div>
+          <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-widest">Regional Expertise</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Deep understanding of South Asian markets combined with global best practices and networks.</p>
         </div>
-        <div class="text-center">
-          <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mx-auto mb-4"><span class="text-gold text-2xl">♻</span></div>
-          <h3 class="font-serif text-lg font-bold text-white mb-3">ESG Commitment</h3>
-          <p class="text-white/60 text-sm leading-relaxed">Sustainability isn't a checkbox — it's embedded in every investment thesis and operational strategy.</p>
+        <div class="bg-neutral-900 p-8 text-center">
+          <div class="text-3xl font-black text-white mb-3">ESG</div>
+          <h3 class="font-semibold text-white mb-3 text-sm uppercase tracking-widest">ESG Commitment</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">Sustainability isn't a checkbox — it's embedded in every investment thesis and operational strategy.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-20 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-serif text-3xl font-bold text-navy mb-4">Want to Learn More?</h2>
-      <p class="text-gray-600 text-lg mb-8">Connect with our team or explore our portfolio of companies.</p>
+  <section class="py-20 bg-white border-t border-neutral-100">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-neutral-900 mb-4">Want to Learn More?</h2>
+      <p class="text-neutral-500 text-lg mb-8">Connect with our team or explore our portfolio of companies.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/companies.html" class="inline-block bg-navy text-white px-8 py-4 rounded font-semibold text-sm uppercase tracking-wider hover:bg-navy/90 transition-colors">View Portfolio</a>
-        <a href="/contact.html" class="inline-block border-2 border-navy text-navy px-8 py-4 rounded font-semibold text-sm uppercase tracking-wider hover:bg-navy hover:text-white transition-colors">Get In Touch</a>
+        <a href="/companies.html" class="inline-block bg-neutral-900 text-white text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-neutral-700 transition-colors">View Portfolio</a>
+        <a href="/contact.html" class="inline-block border border-neutral-900 text-neutral-900 text-[11px] uppercase tracking-widest px-8 py-4 hover:bg-neutral-900 hover:text-white transition-colors">Get In Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark-navy text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <div class="lg:col-span-2"><div class="mb-4"><div class="font-serif text-2xl font-bold">MASTO</div><div class="text-gold text-xs font-semibold tracking-[0.2em] uppercase">HOLDINGS</div></div><p class="text-gray-400 text-sm leading-relaxed max-w-sm">A premier diversified investment and holding company based in Nepal, building world-class businesses across multiple sectors.</p></div>
-        <div><h4 class="font-semibold text-sm uppercase tracking-wider mb-6">Company</h4><ul class="space-y-3"><li><a href="/about.html" class="text-gray-400 hover:text-gold text-sm transition-colors">About Us</a></li><li><a href="/leadership.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Leadership</a></li><li><a href="/companies.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Portfolio</a></li><li><a href="/sustainability.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Sustainability</a></li><li><a href="/careers.html" class="text-gray-400 hover:text-gold text-sm transition-colors">Careers</a></li><li><a href="/news.html" class="text-gray-400 hover:text-gold text-sm transition-colors">News</a></li></ul></div>
-        <div><h4 class="font-semibold text-sm uppercase tracking-wider mb-6">Contact</h4><ul class="space-y-3 text-sm text-gray-400"><li class="flex items-start gap-3"><span class="text-gold mt-0.5">📍</span>Kathmandu, Nepal</li><li class="flex items-center gap-3"><span class="text-gold">✉</span><a href="mailto:info@mastoholdings.com" class="hover:text-gold transition-colors">info@mastoholdings.com</a></li></ul></div>
+  <footer class="bg-neutral-950 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div class="lg:col-span-2">
+          <div class="mb-5">
+            <div class="text-base font-black tracking-widest">MASTO</div>
+            <div class="text-[9px] font-semibold tracking-[0.5em] text-neutral-600 uppercase">HOLDINGS</div>
+          </div>
+          <p class="text-neutral-500 text-sm leading-relaxed max-w-sm">A premier diversified investment and holding company based in Nepal, building world-class businesses across multiple sectors.</p>
+        </div>
+        <div>
+          <h4 class="text-[11px] font-semibold uppercase tracking-widest mb-6 text-neutral-500">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="/about.html" class="text-sm text-neutral-500 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="/leadership.html" class="text-sm text-neutral-500 hover:text-white transition-colors">Leadership</a></li>
+            <li><a href="/companies.html" class="text-sm text-neutral-500 hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="/sustainability.html" class="text-sm text-neutral-500 hover:text-white transition-colors">Sustainability</a></li>
+            <li><a href="/careers.html" class="text-sm text-neutral-500 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="/news.html" class="text-sm text-neutral-500 hover:text-white transition-colors">News &amp; Insights</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-[11px] font-semibold uppercase tracking-widest mb-6 text-neutral-500">Contact</h4>
+          <ul class="space-y-4 text-sm text-neutral-500">
+            <li>Kathmandu, Nepal</li>
+            <li><a href="mailto:info@mastoholdings.com" class="hover:text-white transition-colors">info@mastoholdings.com</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 text-sm">© 2026 Masto Holdings. All rights reserved.</p>
-        <div class="flex gap-8"><a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Privacy Policy</a><a href="#" class="text-gray-500 hover:text-gold text-sm transition-colors">Terms of Service</a></div>
+      <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-neutral-600 text-xs">&copy; 2026 Masto Holdings. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="#" class="text-neutral-600 hover:text-white text-xs transition-colors">Privacy Policy</a>
+          <a href="#" class="text-neutral-600 hover:text-white text-xs transition-colors">Terms of Service</a>
+        </div>
       </div>
     </div>
   </footer>
