@@ -1,0 +1,29 @@
+name = "mastoholdings"
+type = "javascript"
+account_id = "your-account-id"
+workers_dev = true
+main = "src/index.js"
+site = { bucket = "./dist" }
+
+[env.production]
+name = "mastoholdings-prod"
+routes = [
+  { pattern = "mastoholdings.com", zone_name = "mastoholdings.com" },
+  { pattern = "www.mastoholdings.com", zone_name = "mastoholdings.com" }
+]
+vars = { ENVIRONMENT = "production" }
+
+[env.staging]
+name = "mastoholdings-staging"
+routes = [
+  { pattern = "staging.mastoholdings.com", zone_name = "mastoholdings.com" }
+]
+vars = { ENVIRONMENT = "staging" }
+
+# Build configuration
+build = { command = "npm run build", cwd = "." }
+
+# Development server
+[dev]
+host = "localhost"
+port = 3000

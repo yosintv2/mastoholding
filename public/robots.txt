@@ -1,0 +1,35 @@
+# Masto Holdings - robots.txt
+# Generated for optimal SEO performance
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*page=
+Disallow: /search
+
+# Allow specific bot crawling
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap
+Sitemap: https://mastoholdings.com/sitemap.xml
+
+# Crawl delay and rate limiting
+User-agent: *
+Crawl-delay: 1
+
+# Protect sensitive areas
+User-agent: *
+Disallow: /admin
+Disallow: /private
+Disallow: /test

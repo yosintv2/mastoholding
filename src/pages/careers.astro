@@ -1,0 +1,447 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/seo';
+
+const title = 'Careers';
+const description = 'Join Masto Holdings and build your career with one of Nepal\'s fastest-growing holding companies. Explore exciting opportunities.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://mastoholdings.com' },
+  { name: 'Careers', url: 'https://mastoholdings.com/careers' },
+];
+---
+
+<BaseLayout title={title} description={description} url="https://mastoholdings.com/careers">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema(breadcrumbs))} />
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Careers at Masto Holdings</h1>
+      <p>Build your career with one of Nepal's fastest-growing holding companies</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Why Join Us?</h2>
+        <p class="section-subtitle">Work with exceptional people, solve important problems, and make a real impact</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <h3>Growth Opportunities</h3>
+          <p>Work across diverse portfolio companies and sectors. Access learning opportunities, mentorship, and career advancement in a rapidly growing organization.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">💼</div>
+          <h3>Competitive Compensation</h3>
+          <p>We offer competitive salaries, performance bonuses, and comprehensive benefits packages including health insurance and retirement plans.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🌱</div>
+          <h3>Professional Development</h3>
+          <p>Access training programs, certifications, conferences, and mentorship to develop your skills and advance your career.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">👥</div>
+          <h3>Diverse Team</h3>
+          <p>Work with talented professionals from diverse backgrounds. We value different perspectives and foster an inclusive culture.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">⚖️</div>
+          <h3>Work-Life Balance</h3>
+          <p>Flexible work arrangements, wellness programs, and a culture that respects personal time and well-being.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🌍</div>
+          <h3>Impact</h3>
+          <p>Work on meaningful projects that create value for customers, employees, communities, and the environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="text-center section-title">Open Positions</h2>
+
+      <div class="jobs-listing">
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Senior Software Engineer</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Technology</span>
+          </div>
+          <p>We're looking for an experienced software engineer to lead development of our core platform systems. You'll work with modern technologies and mentor junior developers.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Business Development Manager</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Corporate</span>
+          </div>
+          <p>Join our corporate team to identify and develop new business opportunities. You'll work directly with leadership on strategic initiatives and partnerships.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Financial Analyst</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Finance</span>
+          </div>
+          <p>We need a talented financial analyst to support investment evaluation, portfolio analysis, and financial planning across our portfolio companies.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Marketing Manager</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Marketing</span>
+          </div>
+          <p>Lead marketing initiatives for one of our portfolio companies. You'll develop strategies, manage campaigns, and drive brand growth in competitive markets.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>HR Manager</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Human Resources</span>
+          </div>
+          <p>Build our human resources function across portfolio companies. You'll develop policies, manage recruitment, and foster our culture of excellence.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+
+        <div class="job-card">
+          <div class="job-header">
+            <h3>Sustainability Officer</h3>
+            <span class="job-type">Full-time</span>
+          </div>
+          <div class="job-meta">
+            <span class="job-location">📍 Kathmandu, Nepal</span>
+            <span class="job-department">Sustainability</span>
+          </div>
+          <p>Develop and implement ESG initiatives across our portfolio. You'll create sustainability strategies, measure impact, and drive positive change.</p>
+          <button class="btn btn-secondary">Apply Now</button>
+        </div>
+      </div>
+
+      <div class="internships-section">
+        <h3>Internship Program</h3>
+        <p>
+          We also offer internship opportunities for students and recent graduates. Internships provide real-world experience, mentorship, and a chance to contribute
+          to meaningful projects.
+        </p>
+        <button class="btn btn-primary">Explore Internships</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center section-title">Our Culture</h2>
+
+      <div class="culture-content">
+        <p>
+          At Masto Holdings, we've built a culture centered around three core principles: entrepreneurship, excellence, and impact.
+        </p>
+
+        <div class="culture-pillars">
+          <div class="pillar">
+            <h3>🎯 Entrepreneurship</h3>
+            <p>We encourage innovation and new ideas. Our team members are empowered to take ownership, take calculated risks, and drive positive change.</p>
+          </div>
+
+          <div class="pillar">
+            <h3>✨ Excellence</h3>
+            <p>We maintain the highest standards in everything we do. We're committed to continuous learning, improvement, and delivering exceptional quality.</p>
+          </div>
+
+          <div class="pillar">
+            <h3>🌟 Impact</h3>
+            <p>We're motivated by creating value. Whether it's for customers, employees, communities, or the environment, we measure success by the impact we create.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container text-center">
+      <h2>Ready to Join Our Team?</h2>
+      <p>Send us your resume and tell us why you'd like to join Masto Holdings</p>
+      <a href="mailto:careers@mastoholdings.com" class="btn btn-primary">Email Your Application</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-navy) 100%);
+    color: var(--color-white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .benefit-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .benefit-card h3 {
+    color: var(--color-navy);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .benefit-card p {
+    color: var(--color-gray);
+    line-height: 1.8;
+  }
+
+  .jobs-listing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .job-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(10, 31, 68, 0.1);
+    transition: var(--transition);
+  }
+
+  .job-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .job-header h3 {
+    color: var(--color-navy);
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  .job-type {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-gold);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .job-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .job-location,
+  .job-department {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    font-weight: 500;
+  }
+
+  .job-card p {
+    color: var(--color-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-card .btn {
+    width: 100%;
+  }
+
+  .internships-section {
+    background: var(--color-light-gray);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .internships-section h3 {
+    color: var(--color-navy);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .internships-section p {
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .culture-content {
+    text-align: center;
+    margin: 2rem 0 3rem;
+  }
+
+  .culture-content > p {
+    color: var(--color-gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+
+  .culture-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .pillar {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+
+  .pillar:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .pillar h3 {
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .pillar p {
+    color: var(--color-gray);
+    line-height: 1.7;
+  }
+
+  .cta-section {
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 4rem;
+  }
+
+  .cta-section h2 {
+    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-section p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 2rem 0;
+    }
+
+    .page-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .benefits-grid,
+    .jobs-listing {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .job-header {
+      flex-direction: column;
+    }
+
+    .culture-pillars {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .cta-section {
+      padding: 2rem 0;
+    }
+
+    .cta-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

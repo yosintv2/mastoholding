@@ -1,0 +1,275 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { companies, sectors } from '../data/companies';
+import { breadcrumbSchema } from '../lib/seo';
+import type { Company } from '../types';
+
+const title = 'Our Companies';
+const description = 'Explore Masto Holdings portfolio companies across technology, media, beverages, transportation, sports, investments, real estate, and emerging sectors.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://mastoholdings.com' },
+  { name: 'Companies', url: 'https://mastoholdings.com/companies' },
+];
+---
+
+<BaseLayout title={title} description={description} url="https://mastoholdings.com/companies">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema(breadcrumbs))} />
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Our Portfolio Companies</h1>
+      <p>A diversified collection of market-leading businesses across multiple sectors</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="companies-intro">
+        <p>
+          Masto Holdings manages a diverse portfolio of {companies.length} companies spanning eight key sectors. Each company is
+          led by exceptional management teams and operates with operational autonomy while benefiting from group-level synergies
+          and strategic support.
+        </p>
+      </div>
+
+      {sectors.map((sector) => {
+        const sectorCompanies = companies.filter(c => c.sector === sector);
+        return (
+          <div class="sector-section" key={sector}>
+            <h2 class="sector-title">{sector}</h2>
+            <div class="sector-companies">
+              {sectorCompanies.map((company: Company) => (
+                <div class="company-detail-card">
+                  <div class="card-header">
+                    <h3>{company.name}</h3>
+                    {company.established && <span class="established">Est. {company.established}</span>}
+                  </div>
+                  <p class="card-description">{company.description}</p>
+                  {company.website && (
+                    <a href={company.website} target="_blank" rel="noopener noreferrer" class="card-link">
+                      Visit Website →
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="portfolio-stats">
+        <h2 class="text-center section-title">Portfolio Overview</h2>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">{companies.length}</div>
+            <div class="stat-label">Portfolio Companies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">{sectors.length}</div>
+            <div class="stat-label">Key Sectors</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Combined Workforce</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Growth Potential</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-navy) 100%);
+    color: var(--color-white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+  }
+
+  .companies-intro {
+    text-align: center;
+    margin: 2rem 0 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .companies-intro p {
+    color: var(--color-gray);
+    font-size: 1.1rem;
+    line-height: 1.9;
+  }
+
+  .sector-section {
+    margin-bottom: 4rem;
+  }
+
+  .sector-title {
+    color: var(--color-navy);
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-gold);
+  }
+
+  .sector-companies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .company-detail-card {
+    background: var(--color-white);
+    border: 1px solid rgba(10, 31, 68, 0.1);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    transition: var(--transition);
+  }
+
+  .company-detail-card:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-header h3 {
+    color: var(--color-navy);
+    font-size: 1.35rem;
+    margin: 0;
+  }
+
+  .established {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--color-gold);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .card-description {
+    color: var(--color-gray);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .card-link {
+    color: var(--color-gold);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .card-link:hover {
+    color: var(--color-light-gold);
+    transform: translateX(4px);
+    display: inline-block;
+  }
+
+  .portfolio-stats {
+    max-width: 900px;
+    margin: 3rem auto;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat-item {
+    text-align: center;
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    font-family: var(--font-serif);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-gray);
+    font-weight: 500;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 2rem 0;
+    }
+
+    .page-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .sector-title {
+      font-size: 1.35rem;
+    }
+
+    .sector-companies {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .company-detail-card {
+      padding: 1.5rem;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-item {
+      padding: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>

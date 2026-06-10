@@ -1,0 +1,150 @@
+---
+---
+
+<section class="about section bg-light" id="about">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title">About Masto Holdings</h2>
+      <p class="section-subtitle">Established in 2026, we are committed to building businesses that create sustainable long-term value</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-card-icon">📊</div>
+        <h3>Our Vision</h3>
+        <p>Building businesses that create long-term value across Drinks and Breweries, technology, digital products, transportation, investments, sports, and future ventures.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To establish and nurture a portfolio of world-class companies that deliver exceptional value to customers, employees, shareholders, and communities.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-icon">⭐</div>
+        <h3>Our Values</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>✓ Integrity and transparency in all dealings</li>
+          <li>✓ Long-term value creation over short-term gains</li>
+          <li>✓ Commitment to sustainability and social responsibility</li>
+          <li>✓ Innovation and continuous improvement</li>
+          <li>✓ Respect for stakeholders and communities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-item">
+        <div class="highlight-number">8+</div>
+        <div class="highlight-label">Portfolio Companies</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-number">2026</div>
+        <div class="highlight-label">Year Established</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-number">Nepal</div>
+        <div class="highlight-label">Headquarters</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-number">∞</div>
+        <div class="highlight-label">Growth Potential</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+
+  .about-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .about-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .about-card h3 {
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .about-card p,
+  .about-card ul {
+    color: var(--color-gray);
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .about-card ul li {
+    margin-bottom: 0.75rem;
+    text-align: left;
+  }
+
+  .about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(10, 31, 68, 0.1);
+  }
+
+  .highlight-item {
+    text-align: center;
+  }
+
+  .highlight-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+  }
+
+  .highlight-label {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-gray);
+    font-weight: 500;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      gap: 1.5rem;
+    }
+
+    .about-card {
+      padding: 1.75rem;
+    }
+
+    .highlight-number {
+      font-size: 2rem;
+    }
+  }
+</style>

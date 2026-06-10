@@ -1,0 +1,215 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Company Info -->
+        <div class="footer-section">
+          <h3>Masto Holdings</h3>
+          <p>Building businesses that create long-term value across multiple sectors.</p>
+          <div class="social-links">
+            <a href="https://linkedin.com/company/mastoholdings" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.39v-1.2h-2.84v8.37h2.84v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.84M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </a>
+            <a href="https://twitter.com/mastoholdings" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.46 6c-.85.39-1.78.65-2.73.77 1-6 3.88-1.13 4.27-2.27-1 .59-2.1 1.02-3.28 1.25-.93-1-2.28-1.62-3.76-1.62-2.85 0-5.16 2.31-5.16 5.16 0 .4.05.8.15 1.18-4.3-.22-8.13-2.28-10.7-5.43-.44.77-.7 1.66-.7 2.6 0 1.79.92 3.37 2.32 4.3-.86-.03-1.68-.26-2.39-.65v.07c0 2.5 1.78 4.59 4.14 5.06-.43.12-.89.18-1.36.18-.33 0-.66-.03-.98-.08.66 2.06 2.57 3.56 4.83 3.6-1.77 1.39-4 2.21-6.42 2.21-.42 0-.83-.02-1.24-.07 2.34 1.5 5.12 2.37 8.1 2.37 9.72 0 15.02-8.05 15.02-15.02 0-.23 0-.45-.01-.67.73-.58 1.73-1.31 2.4-2.08z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/companies">Our Companies</a></li>
+            <li><a href="/leadership">Leadership</a></li>
+            <li><a href="/sustainability">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="/news">News & Insights</a></li>
+            <li><a href="/careers">Careers</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="mailto:contact@mastoholdings.com">contact@mastoholdings.com</a></li>
+            <li><a href="tel:+977123456789">+977 (0) 1 234 5678</a></li>
+            <li>
+              <address>
+                Masto Holdings<br/>
+                Nepal
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div style="border-top: 1px solid rgba(10, 31, 68, 0.1); margin: 3rem 0;"></div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; {currentYear} Masto Holdings. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/sitemap">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-navy) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 2rem;
+    margin-top: 6rem;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-section h3 {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-section h4 {
+    color: var(--color-gold);
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+
+  .footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-section li {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: var(--transition);
+    text-decoration: none;
+  }
+
+  .footer-section a:hover {
+    color: var(--color-gold);
+  }
+
+  .footer-section address {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--color-gold);
+    transition: var(--transition);
+  }
+
+  .social-links a:hover {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    transition: var(--transition);
+  }
+
+  .footer-links a:hover {
+    color: var(--color-gold);
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-grid {
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+</style>

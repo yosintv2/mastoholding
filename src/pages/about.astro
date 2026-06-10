@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/seo';
+
+const title = 'About Us';
+const description = 'Learn about Masto Holdings, our vision, mission, and values as a diversified holding company in Nepal.';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://mastoholdings.com' },
+  { name: 'About', url: 'https://mastoholdings.com/about' },
+];
+---
+
+<BaseLayout title={title} description={description} url="https://mastoholdings.com/about">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema(breadcrumbs))} />
+
+  <div class="page-header">
+    <div class="container">
+      <h1>About Masto Holdings</h1>
+      <p>Building sustainable businesses that create long-term value</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="content-grid">
+        <div>
+          <h2>Our Story</h2>
+          <p>
+            Masto Holdings was established in 2026 with a clear vision: to build a diversified portfolio of exceptional
+            businesses that create sustainable value for all stakeholders. Founded on principles of integrity, innovation,
+            and long-term thinking, we have rapidly established ourselves as a leader in Nepal's business landscape.
+          </p>
+          <p>
+            Our holding company model allows us to invest across diverse sectors—from technology and digital platforms to
+            beverages, transportation, sports, and real estate—while maintaining operational independence and strategic synergy
+            across our portfolio companies.
+          </p>
+        </div>
+        <div>
+          <h2>Our Philosophy</h2>
+          <p>
+            We believe in creating businesses that endure. Unlike investment funds focused on quick returns, we take a long-term
+            view, building enterprises designed to last decades. This philosophy guides every investment decision and strategic initiative.
+          </p>
+          <p>
+            Our success is measured not just in financial returns, but in the positive impact we create for employees, customers,
+            communities, and the environment. We invest in talented management teams, provide patient capital, and facilitate synergies
+            across our portfolio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="text-center section-title">Our Core Values</h2>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Integrity</h3>
+          <p>We conduct business with transparency, honesty, and ethical principles in all our dealings.</p>
+        </div>
+        <div class="value-card">
+          <h3>Long-term Value</h3>
+          <p>We prioritize sustainable growth over short-term gains, building businesses that endure.</p>
+        </div>
+        <div class="value-card">
+          <h3>Innovation</h3>
+          <p>We embrace change and encourage continuous improvement and entrepreneurial thinking.</p>
+        </div>
+        <div class="value-card">
+          <h3>Sustainability</h3>
+          <p>We commit to environmental responsibility and positive social impact in all our operations.</p>
+        </div>
+        <div class="value-card">
+          <h3>Excellence</h3>
+          <p>We pursue the highest standards of quality and performance in everything we do.</p>
+        </div>
+        <div class="value-card">
+          <h3>People First</h3>
+          <p>We invest in our people, foster a culture of respect, and create opportunities for growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center section-title">Why Choose Masto Holdings?</h2>
+
+      <div class="grid-2">
+        <div class="benefit-item">
+          <div class="benefit-icon">🌍</div>
+          <h3>Global Perspective</h3>
+          <p>Operating across South Asia with international best practices and global standards.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📈</div>
+          <h3>Growth Mindset</h3>
+          <p>Consistently seeking new opportunities and expanding into emerging sectors.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🤝</div>
+          <h3>Strategic Partnerships</h3>
+          <p>Building synergies across portfolio companies to unlock value and accelerate growth.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💡</div>
+          <h3>Innovation Focus</h3>
+          <p>Dedicated to technological advancement and digital transformation initiatives.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">♻️</div>
+          <h3>Sustainability Leader</h3>
+          <p>Leading the way in ESG practices and environmental responsibility across sectors.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">👥</div>
+          <h3>Talented Teams</h3>
+          <p>Attracting and retaining exceptional leaders and professionals across all companies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-dark-navy) 100%);
+    color: var(--color-white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .page-header h1 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+  }
+
+  .content-grid h2 {
+    color: var(--color-navy);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  .content-grid p {
+    color: var(--color-gray);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .value-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border-left: 4px solid var(--color-gold);
+    transition: var(--transition);
+  }
+
+  .value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .value-card h3 {
+    color: var(--color-navy);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .value-card p {
+    color: var(--color-gray);
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  .benefit-item {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .benefit-item h3 {
+    color: var(--color-navy);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .benefit-item p {
+    color: var(--color-gray);
+    line-height: 1.7;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .page-header {
+      padding: 2rem 0;
+    }
+
+    .page-header h1 {
+      font-size: 1.75rem;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>
