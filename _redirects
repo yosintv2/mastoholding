@@ -1,11 +1,7 @@
-# Cloudflare Pages _redirects file
-# Used for URL redirects and rewrites
-
-# Redirect non-www to www (optional)
-# http://mastoholdings.com/* https://www.mastoholdings.com/:splat 301!
-
-# Security headers and trailing slash handling
-/*   /index.html  200
-
-# Old URLs to new ones (add as needed)
-# /old-page /new-page 301
+/about /about.html 301
+/companies /companies.html 301
+/leadership /leadership.html 301
+/sustainability /sustainability.html 301
+/careers /careers.html 301
+/contact /contact.html 301
+/news /news.html 301
